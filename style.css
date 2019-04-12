@@ -98,7 +98,6 @@ body {
     align-items: space-between;
     height: 100%;
     list-style-type: none;
-    background-color: ;
 }
 
 .aside-menu ul>li {
@@ -127,10 +126,10 @@ body {
 
 header {
     position: relative;
-    background-color: #444;
-    margin: auto;
-    width:100vw;
     flex-basis: 20vh;
+    padding: 20px;
+    margin: 67px 0;
+    background-color: #444;
     overflow: hidden;
 }
 
@@ -139,12 +138,11 @@ header h2 {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 60px;
     color: aliceblue;
+    font-size: 60px;
     text-shadow: 1px 1px 2px #fff;
     text-transform: capitalize;
-    padding: 20px 0;
-    letter-spacing: 5px;  
+    letter-spacing: 5px; 
     animation: changeWelcomeSlogan 12s linear infinite both;
 }
 
@@ -154,6 +152,35 @@ header h2:nth-child(2) {
 header h2:nth-child(3) {
     animation-delay: 8s;
 }
+
+main {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+section {
+    margin: 0;
+    padding: 0;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.s1 {
+    background-color: rgb(49, 138, 129);
+}
+
+.s2 {
+    background-color: rgb(27, 51, 27);
+}
+
+.s3 {
+    background-color: rgb(58, 20, 148);
+}
+
+.s4 {
+    background-color: rgb(9, 59, 20);
+}
+
 
 @keyframes welcome-slider-color-picture {
     0% {
