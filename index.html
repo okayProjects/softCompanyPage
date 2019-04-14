@@ -9,6 +9,7 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
     <title>Project</title>
 </head>
 
@@ -17,19 +18,19 @@
         <aside class="aside-menu active">
             <ul>
                 <li>
-                    <a href=""><i class="far fa-play-circle one"></i>start</a>
+                    <a href="#" class='introduction'><i class="far fa-play-circle" ></i>start</a>
                 </li>
                 <li>
-                    <a href=""><i class="fab fa-affiliatetheme two"></i>offer</a>
+                    <a href="#" class='two'><i class="fab fa-affiliatetheme two" ></i>offer</a>
                 </li>
                 <li>
-                    <a href=""><i class="fab fa-angular three"></i></i>blog</a>
+                    <a href="#" class="three"><i class="fab fa-angular three"></i></i>blog</a>
                 </li>
                 <li>
-                    <a href=""><i class="far fa-calendar-alt four"></i>timetable</a>
+                    <a href="#" class="four"><i class="far fa-calendar-alt four"></i>timetable</a>
                 </li>
                 <li>
-                    <a href=""><i class="far fa-envelope five"></i>contact</a>
+                    <a href="#" class="five"><i class="far fa-envelope five"></i>contact</a>
                 </li>
             </ul>
         </aside>
@@ -48,21 +49,72 @@
         </div>
     </div>
     <header>
-        <h2 class="las">welcome to</h2>
-        <h2 class="las">{ okayProjects }</h2>
-        <h2 class="las">HELLO</h2>
+        <h2>welcome to</h2>
+        <h2>{ okayProjects }</h2>
+        <h2>hello</h2>
     </header>
     <main>
-        <section id='one' class="s1"></section>
-        <section id='two' class="s2"></section>
-        <section id='three' class="s3"></section>
-        <section id='four' class="s4"></section>
-        <section id='five' class="s5"></section>
+        <section data-section='introduction' class="s1">
+            <div class="offer-one">
+                <i class="fab fa-affiliatetheme"></i>
+                <h2>thinking globaly, working localy</h2>
+                <p>Lorem ipsum dolorsit amet, consectetur adipisicing elit. Corporis error magnam dolor numquam
+                    provident cupiditate laudantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Corporis
+                    error magnam dolor numquam provident cupiditate laudantium. Lorem ipsum dolor sit amet,
+                    consectetur
+                </p>
+            </div>
+            <div class="offer-two">
+                <i class="far fa-calendar-check"></i>
+                <h2>bespoke prjects</h2>
+                <p>Lorem ipsum dolorsit amet, consectetur adipisicing elit. Corporis error magnam dolor numquam
+                    provident cupiditate laudantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Corporis
+                    error magnam dolor numquam provident cupiditate laudantium. Lorem ipsum dolor sit amet,
+                    consectetur
+                </p>
+            </div>
+            <div class="offer-three">
+                <i class="far fa-heart"></i>
+                <h2>with passion and love</h2>
+                <p>Lorem ipsum dolorsit amet, consectetur adipisicing elit. Corporis error magnam dolor numquam
+                    provident cupiditate laudantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Corporis
+                    error magnam dolor numquam provident cupiditate laudantium. Lorem ipsum dolor sit amet,
+                    consectetur
+                </p>
+            </div>
+            <div class="offer-four">
+                <i class="far fa-comment-dots"></i>
+                <h2>B2B cooperation</h2>
+                <p>Lorem ipsum dolorsit amet, consectetur adipisicing elit. Corporis error magnam dolor numquam
+                    provident cupiditate laudantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Corporis
+                    error magnam dolor numquam provident cupiditate laudantium. Lorem ipsum dolor sit amet,
+                    consectetur
+                </p>
+            </div>
+        </section>
+        <section data-section='two' class="s2">
+            <div class="photo-one-wrapper">
+                <img src="assets/s2/photo-one.jpg" alt="photo-one">
+            </div>
+            <div class="photo-two-wrapper">
+                <img src="assets/s2/photo-two.jpg" alt="photo-two">
+            </div>
+        </section>
+        <section data-section='three' class="s3"></section>
+        <section data-section='four' class="s4"></section>
+        <section data-section='five' class="s5"></section>
     </main>
 
 
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
+
 </body>
 
 </html>

@@ -24,6 +24,8 @@ const greyImages = ['assets/welcome-slider/s1a.png', 'assets/welcome-slider/s2a.
 const names = ['Anna Deadline', 'Mark Flexible', 'Joe TeamPlayer'];
 const professions = ['JS Programmer', 'UX UI designer', 'front-end developer'];
 
+const changeSlideTime = 5000;
+
 const changeSlide = () => {
     activeSlide++;
 
@@ -37,4 +39,13 @@ const changeSlide = () => {
     h2.textContent = professions[activeSlide];
 }
 
-setInterval(changeSlide, 4000);
+setInterval(changeSlide, changeSlideTime);
+
+//menu-go-to-section
+
+$('aside li a').on('click', function () {
+    const goToSection = "[data-section=" + $(this).attr('class') + "]"
+    $('body, html').animate({
+        scrollTop: $(goToSection).offset().top
+    });
+})
