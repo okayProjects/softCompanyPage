@@ -87,7 +87,7 @@ console.log(slideList);
 const image = document.querySelector('.s4-carusel-photo-wrapper img');
 const opinion = document.querySelector('.s4-carusel-wrapper blockquote i');
 const jobTitle = document.querySelector('.s4-carusel-wrapper h3');
-const time = 3000;
+const time = 5000;
 let activeOpinionSlide = 0;
 
 const changeOpinionSlide = () => {
