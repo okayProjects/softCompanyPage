@@ -161,13 +161,29 @@ header h2:nth-child(3) {
     padding-top: 50px;
 }
 
-.s1 .offer-one, .s1 .offer-two, .s1 .offer-three, .s1 .offer-four {
+.s1 .offer-one, 
+.s1 .offer-two, 
+.s1 .offer-three, 
+.s1 .offer-four {
     flex-basis: 40%;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 } 
+
+.s1 .offer-one, .s1 .offer-four {
+    transform: translateX(101vw)
+}
+.s1 .offer-one.activated, .s1 .offer-four.activated {
+    transform: translateX(0)
+}
+.s1 .offer-two, .s1 .offer-three {
+    transform: translateX(-101vw)
+}
+.s1 .offer-two.activated, .s1 .offer-three.activated {
+    transform: translateX(0)
+}
 
 .s1 i {
     font-size: 35px;
@@ -242,11 +258,21 @@ header h2:nth-child(3) {
     position: relative;
     flex-basis: 50%;
     padding: 0 10px;
+    transform: scale(0);
+    transition: .5s;
 }
 
-.s2 img {
+.s2 .photo-one-wrapper.activated,
+.s2 .photo-two-wrapper.activated {
+    transform: scale(1);
+}
+
+.s2 .photo-one-wrapper img,
+.s2 .photo-two-wrapper img
+ {
     width: 100%;
     height: 80%;
+    border-radius: 5px;
 }
 
 .s2 .photo-one-wrapper div,
@@ -356,6 +382,7 @@ header h2:nth-child(3) {
     font-weight: bold;
     border: 1px solid rgb(42, 197, 3);
     padding: 3px;
+    margin-right: 5px;
 }
 
 .s3 {
@@ -481,6 +508,13 @@ header h2:nth-child(3) {
     display: block;
     padding: 0 70px;
     max-height: 80px;
+    transform: scale(0) rotate(0);
+    transition: 1s ease-out;
+    
+}
+
+.s3-right-wrapper .logo-wrapper img.activated {
+    transform: scale(1) rotate(720deg);
 }
 
 .s4 {
@@ -499,6 +533,10 @@ header h2:nth-child(3) {
     height: 50%;
     position: relative;
     z-index: 2;
+}
+
+.s4 .s4-photo-wrapper img.activated {
+    animation: macShake .5s linear 3;
 }
 
 .s4 .s4-carusel-wrapper {
@@ -525,6 +563,8 @@ header h2:nth-child(3) {
     margin-left: 70px;
     width: 10%;
     height: 25%;
+    border-radius: 90%;
+
 }
 
 .s4-carusel-photo-wrapper img {
@@ -532,6 +572,7 @@ header h2:nth-child(3) {
     height: 100%;
     width: 100%;
     border-radius: 90%;
+    border-color: red;
 }
 
 .s4-carusel-wrapper blockquote {
@@ -607,8 +648,14 @@ header h2:nth-child(3) {
     width: 60px;
     border-radius: 50%;
     background-color: #555;
+    cursor: pointer;
     overflow: hidden;
-    
+    display: none;
+    /* transition: .3s linear; */
+}
+
+.arrow.visible {
+    display: block;
 }
 
 .arrow i {
@@ -821,6 +868,31 @@ footer p {
     }
 }
 
+@keyframes macShake {
+    0% {
+        transform: rotate(0);
+        
+    }
+    5% {
+        transform: rotate(-10deg);
+    }
+    45% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(0);
+    }
+    55% {
+        transform: rotate(10deg);
+    }
+    95% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+
+}
 
 
 

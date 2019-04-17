@@ -11,7 +11,7 @@ const displayAsideMenu = () => {
 
 burger.addEventListener('click', displayAsideMenu);
 
-//jumbotron animation
+//s1 animation
 
 let activeSlide = 0;
 const colorImg = document.querySelector('.color');
@@ -41,7 +41,7 @@ const changeSlide = () => {
 
 setInterval(changeSlide, changeSlideTime);
 
-//menu-go-to-section
+//menu-go-to-section, arrow-clicked-go-t0-top
 
 $('aside li a').on('click', function () {
     const goToSection = "[data-section=" + $(this).attr('class') + "]"
@@ -50,7 +50,11 @@ $('aside li a').on('click', function () {
     });
 })
 
-
+$('.arrow').on('click', function () {
+    $('body, html').animate({
+        scrollTop: $('.jumbotron').offset().top
+    })
+})
 //opinions
 
 const slideList = [
@@ -77,12 +81,9 @@ const slideList = [
     {
         image: 'assets/opinions/portrait5.jpg',
         opinion: 'Opinion no FIVE: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis error magnam dolor numquam provident cupiditate laudantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis error magnam dolor numquam provident cupiditate laudantium',
-        jobTitle: 'FIVE'
+        jobTitle: 'Job Title FIVE'
     }
 ]
-
-console.log(slideList);
-
 
 const image = document.querySelector('.s4-carusel-photo-wrapper img');
 const opinion = document.querySelector('.s4-carusel-wrapper blockquote i');
@@ -101,3 +102,64 @@ const changeOpinionSlide = () => {
 }
 
 setInterval(changeOpinionSlide, time);
+
+
+// onScroll activators
+
+$(document).on('scroll', function () {
+
+    //rightBottomArrowActivator
+
+    const windowHeight = $(window).height();
+    const currentScrollValue = $(this).scrollTop();
+    const arrow = $('.arrow');
+    const s1 = $('.s1');
+    const s1Height = s1.height();
+    const s1FromTop = s1.offset().top;
+
+    if (currentScrollValue > s1Height + s1FromTop - windowHeight) {
+        arrow.addClass('visible');
+    } else {
+        arrow.removeClass('visible');
+    }
+
+    // offer
+
+    if (currentScrollValue > s1Height + s1FromTop - windowHeight) {
+        $('.offer-one, .offer-two, .offer-three, .offer-four')
+            .addClass('activated');
+    }
+
+    // s2 left/right pictures
+
+    const s2 = $('.s2');
+    const s2Height = s2.height();
+    const s2FromTop = s2.offset().top;
+
+    if (currentScrollValue > s2Height + s2FromTop - windowHeight * 1.3) {
+        $('.s2 .photo-one-wrapper, .s2 .photo-two-wrapper')
+            .addClass('activated');
+    }
+
+    // s3 clients' logos
+
+    const s3 = $('.s3');
+    const s3Height = s3.height();
+    const s3FromTop = s3.offset().top;
+
+    if (currentScrollValue > s3Height + s3FromTop - windowHeight * 1.3) {
+        $('.s3-right-wrapper .logo-wrapper img')
+            .addClass('activated');
+    }
+
+    // s4 mac-shake
+
+    const s4 = $('.s4');
+    const s4Height = s4.height();
+    const s4FromTop = s4.offset().top;
+
+    if (currentScrollValue > s4Height + s4FromTop - windowHeight * 1.3) {
+        $('.s4 .s4-photo-wrapper img')
+            .addClass('activated');
+    }
+});
