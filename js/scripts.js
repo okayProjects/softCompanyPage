@@ -90,14 +90,14 @@ const opinion = document.querySelector('.s4-carusel-wrapper blockquote i');
 const jobTitle = document.querySelector('.s4-carusel-wrapper h3');
 const time = 5000;
 let activeOpinionSlide = 0;
-const dotsWrapper = document.querySelector('.dots');
+const spansWrapper = document.querySelector('.dots');
 
 for (let i = 0; i < slideList.length; i++) {
     const span = document.createElement('span');
     const att = document.createAttribute('id');
     att.value = i;
     span.setAttributeNode(att);
-    dotsWrapper.appendChild(span);
+    spansWrapper.appendChild(span);
 }
 
 document.querySelector('.dots span:first-child').classList.add('active');

@@ -159,6 +159,7 @@ header h2:nth-child(3) {
     justify-content: center;
     padding-bottom: 70px;
     padding-top: 50px;
+    overflow: hidden;
 }
 
 .s1 .offer-one, 
