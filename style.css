@@ -564,7 +564,6 @@ header h2:nth-child(3) {
     width: 10%;
     height: 25%;
     border-radius: 90%;
-
 }
 
 .s4-carusel-photo-wrapper img {
@@ -572,7 +571,7 @@ header h2:nth-child(3) {
     height: 100%;
     width: 100%;
     border-radius: 90%;
-    border-color: red;
+    box-shadow: 0 0px 20px #000, 0 0px 25px #fff;
 }
 
 .s4-carusel-wrapper blockquote {
@@ -582,20 +581,29 @@ header h2:nth-child(3) {
     letter-spacing: 3px;
     line-height: 20px;
     text-align: justify;
-    padding-top: 50px;
+    /* padding-top: 50px; */
 }
 
 .s4-carusel-wrapper .dots {
-    margin: 10px 0 30px;
-    font-size: 50px;
-    border-radius: 50%;
-    color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.s4-carusel-wrapper .dots span {
+    display: inline-block;
+    background-color: #000;
+    margin: 0 20px;
+    width: 10px;
+    height: 10px;
+    background-color: aliceblue;
+    cursor: pointer;
+
 }
 
 .s4-carusel-wrapper .dots .active {
-    border-radius: 50%;
-    font-size: 10px;
-    box-shadow: 0 0 0 5px white;
+    box-shadow: 0 0 0 5px aliceblue;
 }
 
 .s4-carusel-wrapper h3 {

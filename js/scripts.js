@@ -90,6 +90,27 @@ const opinion = document.querySelector('.s4-carusel-wrapper blockquote i');
 const jobTitle = document.querySelector('.s4-carusel-wrapper h3');
 const time = 5000;
 let activeOpinionSlide = 0;
+const dotsWrapper = document.querySelector('.dots');
+
+for (let i = 0; i < slideList.length; i++) {
+    const span = document.createElement('span');
+    const att = document.createAttribute('id');
+    att.value = i;
+    span.setAttributeNode(att);
+    dotsWrapper.appendChild(span);
+}
+
+document.querySelector('.dots span:first-child').classList.add('active');
+const spans = [...document.querySelectorAll('.dots span')];
+
+const changeActiveDot = () => {
+    const activeSpan = spans.findIndex(span =>
+        span.classList.contains('active'));
+
+    spans[activeSpan].classList.remove('active');
+    spans[activeOpinionSlide].classList.add('active');
+}
+
 
 const changeOpinionSlide = () => {
     activeOpinionSlide++;
@@ -99,10 +120,23 @@ const changeOpinionSlide = () => {
     image.src = slideList[activeOpinionSlide].image;
     opinion.textContent = slideList[activeOpinionSlide].opinion;
     jobTitle.textContent = slideList[activeOpinionSlide].jobTitle;
+    changeActiveDot();
 }
 
-setInterval(changeOpinionSlide, time);
+let intervalIndex = setInterval(changeOpinionSlide, time);
 
+const changeSlideByClick = function (e) {
+    const spanClicked = e.target.id;
+    activeOpinionSlide = spanClicked;
+    image.src = slideList[activeOpinionSlide].image;
+    opinion.textContent = slideList[activeOpinionSlide].opinion;
+    jobTitle.textContent = slideList[activeOpinionSlide].jobTitle;
+    changeActiveDot();
+    clearInterval(intervalIndex);
+    intervalIndex = setInterval(changeOpinionSlide, time);
+}
+
+spans.forEach(span => span.addEventListener('click', changeSlideByClick));
 
 // onScroll activators
 
