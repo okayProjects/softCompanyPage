@@ -83,11 +83,11 @@ body {
     margin-left: 5px;
 }
 
-.fas {
+.burger .fas {
     display: none;
 }
 
-.fas.show {
+.burger .fas.show {
     display: block;
 }
 
@@ -676,6 +676,110 @@ header h2:nth-child(3) {
     color: rgb(42, 197, 3);
     text-shadow: 0 -20px 0 rgb(42, 197, 3), 0 -40px 0 rgb(42, 197, 3);
     animation: rightBottomArrowUp 1s infinite linear;
+}
+
+.modal-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    width: 75vw;
+    height: 80vh;
+}
+
+.modal-wrapper .modal-picture-wrapper {
+    background-image: url(assets/modal/cityByNight.jpg);
+    flex-basis: 30%;
+}
+
+.modal-wrapper h2 {
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 7px;
+    text-transform: capitalize;
+}
+
+.modal-wrapper .modal-picture-wrapper {
+    display: flex;
+    color: aliceblue;
+}
+
+.modal-picture-wrapper .modal-picture-slogan {
+    flex-basis: 35%;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.modal-picture-wrapper .modal-picture-slogan h3:first-child {
+    font-size: 25px;
+    letter-spacing: 7px;
+    padding: 0 0 2% 5%;
+}
+.modal-picture-wrapper .modal-picture-slogan h3:last-child {
+    font-size: 30px;
+    text-transform: capitalize;
+    padding-left: 5%;
+}
+
+.modal-picture-wrapper .modal-contact-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+
+.modal-contact-details h2 {
+    flex-basis: 42%;
+    border-bottom: 2px solid aliceblue;
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-contact-details .modal-span-wrapper {
+    flex-grow: 1;
+    display: flex;
+    padding: 2%;
+    font-size: 15px;
+    flex-wrap: wrap;
+}
+
+.modal-span-wrapper span {
+    flex-basis: 50%;
+}
+
+.modal-span-wrapper span i {
+    padding: 0 3%;
+    color: rgb(42, 197, 3);
+}
+
+/* .modal-span-wrapper span:first-of-type {
+
+    flex-basis: 50%;
+}
+.modal-span-wrapper span:nth-of-type(2) {
+    
+    flex-basis: 50%;
+}
+.modal-span-wrapper span:nth-of-type(3) {
+   
+    flex-basis: 50%;
+}
+.modal-span-wrapper span:last-of-type {
+    
+    flex-basis: 50%;
+} */
+
+.modal-wrapper .modal-form-wrapper {
+ 
+    flex-grow: 1;
 }
 
 footer {
