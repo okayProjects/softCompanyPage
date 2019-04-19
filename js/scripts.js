@@ -197,3 +197,19 @@ $(document).on('scroll', function () {
             .addClass('activated');
     }
 });
+
+
+//popup-modal activator
+
+const buttons = [...document.querySelectorAll('.modal-activator')];
+const modal = document.querySelector('.modal-wrapper');
+const cancelButton = document.querySelector('.modal-form-wrapper button.cancel');
+const body = document.querySelector('main');
+
+const popUpModalActivator = () => {
+    modal.classList.add('active');
+    body.classList.add('blured');
+}
+
+cancelButton.addEventListener('click', () => modal.classList.remove('active'));
+buttons.forEach(button => button.addEventListener('click', popUpModalActivator));

@@ -10,6 +10,10 @@ body {
     min-height: 100vh;
 }
 
+main.blured {
+    filter: blur(20px);
+}
+
 .jumbotron {
     display: flex;
     padding-top: 10px;
@@ -635,6 +639,7 @@ header h2:nth-child(3) {
     font-size: 80px;
     font-family: 'Roboto Mono', monospace;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .s5 span::after {
@@ -660,7 +665,6 @@ header h2:nth-child(3) {
     cursor: pointer;
     overflow: hidden;
     display: none;
-    /* transition: .3s linear; */
 }
 
 .arrow.visible {
@@ -679,12 +683,25 @@ header h2:nth-child(3) {
 }
 
 .modal-wrapper {
+     
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-200%);
+    padding: 30px;
+    transition: 1s;
+}
+
+.modal-wrapper.active {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: rgba(44, 51, 43, 0.5);
     width: 75vw;
-    height: 80vh;
+    height: 80vh; 
+    transform: translate(-50%,-50%);
+    
+    z-index: 100;
 }
 
 .modal-wrapper .modal-picture-wrapper {
@@ -693,12 +710,14 @@ header h2:nth-child(3) {
 }
 
 .modal-wrapper h2 {
-    flex-basis: 20%;
+    flex-basis: 25%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 30px;
+    color: aliceblue;
+    font-weight: bold;
     font-family: 'Roboto Mono', monospace;
     letter-spacing: 7px;
     text-transform: capitalize;
@@ -739,6 +758,7 @@ header h2:nth-child(3) {
     flex-basis: 42%;
     border-bottom: 2px solid aliceblue;
     font-family: 'Roboto Mono', monospace;
+    padding: 1%;
     display: flex;
     justify-content: flex-end;
 }
@@ -753,6 +773,7 @@ header h2:nth-child(3) {
 
 .modal-span-wrapper span {
     flex-basis: 50%;
+    padding: 1% 0;
 }
 
 .modal-span-wrapper span i {
@@ -760,26 +781,47 @@ header h2:nth-child(3) {
     color: rgb(42, 197, 3);
 }
 
-/* .modal-span-wrapper span:first-of-type {
-
-    flex-basis: 50%;
-}
-.modal-span-wrapper span:nth-of-type(2) {
-    
-    flex-basis: 50%;
-}
-.modal-span-wrapper span:nth-of-type(3) {
-   
-    flex-basis: 50%;
-}
-.modal-span-wrapper span:last-of-type {
-    
-    flex-basis: 50%;
-} */
-
 .modal-wrapper .modal-form-wrapper {
- 
     flex-grow: 1;
+}
+.modal-wrapper .modal-form-wrapper form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.modal-form-wrapper form input {
+    flex-basis: 30%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px solid black; 
+    border-radius: 5px;
+}
+
+.modal-form-wrapper form .textarea {
+    flex-basis: 100%;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid black; 
+    border-radius: 5px;
+}
+
+.modal-form-wrapper form button {
+    flex-basis: 20%; 
+    padding: 10px 20px;  
+    border: 1px solid black; 
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: transparent;
+    font-weight: bold;
+    transition: .4s;
+}
+
+.modal-form-wrapper form button:hover {
+    background-color: aliceblue;
+    border: none; 
+    color: inherit;
+    font-weight: 300;
 }
 
 footer {

@@ -98,14 +98,14 @@
                 <img src="assets/s2/photo-one.jpg" alt="photo-one">
                 <div>
                     <h3>powerd by passion</h3>
-                    <button>expect more</button>
+                    <button class="modal-activator">expect more</button>
                 </div>
             </div>
             <div class="photo-two-wrapper">
                 <img src="assets/s2/photo-two.jpg" alt="photo-two">
                 <div>
                     <h3>done with professionalism</h3>
-                    <button>expect more</button>
+                    <button class="modal-activator">expect more</button>
                 </div>
             </div>
             <div class="statistics">
@@ -139,7 +139,7 @@
                         by learning and adopting latest industry trends and technologies. From web designing to mobile
                         application development, we have proficiency in managing a number of complex projects.
                     </p>
-                    <button>let's talk</button>
+                    <button class="modal-activator">let's talk</button>
                 </div>
             </div>
             <div class="s3-right-wrapper">
@@ -177,7 +177,7 @@
         </section>
         <section data-section='five' class="s5">
             <div>
-                <p>Expect more<span>...</span></p>
+                <p>Expect more<span class="modal-activator">...</span></p>
             </div>
         </section>
     </main>
@@ -187,7 +187,7 @@
     <div class="modal-wrapper">
         <div class="modal-picture-wrapper">
             <div class="modal-picture-slogan">
-                <h3>Make</h3>
+                <h3>Making</h3>
                 <h3>the first step</h3>
             </div>
             <div class="modal-contact-details">
@@ -200,10 +200,17 @@
                 </div>
             </div>
         </div>
-
         <h2>Boost your project</h2>
-
-        <div class="modal-form-wrapper"></div>
+        <div class="modal-form-wrapper">
+            <form>
+                <input type="text" id="fname" class="fname" placeholder="Your name" minlength="3" />
+                <input type="text" id="lname" class="lname" placeholder="Your Surname" />
+                <input type="email" id="email" class="email" placeholder="Your email" />
+                <textarea class="textarea" placeholder="Your opinion"></textarea>
+                <button class='cancel' type="submit">Cancel</button>
+                <button type="submit">Submit your request</button>
+            </form>
+        </div>
     </div>
     <footer>
         <i>
