@@ -60,22 +60,22 @@ $('.arrow').on('click', function () {
 const slideList = [
     {
         image: 'assets/opinions/portrait1.jpg',
-        opinion: 'Opinion no ONE: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis error magnam dolor numquam provident cupiditate laudantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis error magnam dolor numquam provident cupiditate laudantium',
+        opinion: 'Opinion no ONE: They floated in the human system. The alarm still oscillated, louder here, the rear of the room where Case waited. After the postoperative check at the rear of the arcade showed him broken lengths of damp chipboard and the dripping chassis of a gutted game console. The alarm still oscillated, louder here.',
         jobTitle: 'Job Title One'
     },
     {
         image: 'assets/opinions/portrait2.jpg',
-        opinion: 'Opinion no TWO: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis error magnam dolor numquam provident cupiditate laudantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis error magnam dolor numquam provident cupiditate laudantium',
+        opinion: 'Opinion no TWO: Molly took him to the Tank War, mouth touched with hot gold as a gliding cursor struck sparks from the wall of a heroin factory.A narrow wedge of light from a half - open service hatch framed a heap of discarded fiber optics and the chassis of a painted jungle.',
         jobTitle: 'Job Title TWO'
     },
     {
         image: 'assets/opinions/portrait3.jpg',
-        opinion: 'Opinion no THREE: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis error magnam dolor numquam provident cupiditate laudantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis error magnam dolor numquam provident cupiditate laudantium',
+        opinion: 'He’d waited in the center of his closed left eyelid. He stared at the rear of the arcade showed him broken lengths of damp chipboard and the dripping chassis of a gutted game console. All the speed he took, all the turns he’d taken and the corners he’d cut in Night City, and still he’d see the matrix in his jacket pocket.',
         jobTitle: 'Job Title THREE'
     },
     {
         image: 'assets/opinions/portrait4.jpg',
-        opinion: 'Opinion no FOUR: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis error magnam dolor numquam provident cupiditate laudantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis error magnam dolor numquam provident cupiditate laudantium',
+        opinion: 'Opinion no FOUR: All the speed he took, all the turns he’d taken and the corners he’d cut in Night City, and still he’d see the matrix in his jacket pocket. Molly hadn’t seen the dead girl’s face swirl like smoke,',
         jobTitle: 'Job Title FOUR'
     },
     {
@@ -204,11 +204,11 @@ $(document).on('scroll', function () {
 const buttons = [...document.querySelectorAll('.modal-activator')];
 const modal = document.querySelector('.modal-wrapper');
 const cancelButton = document.querySelector('.modal-form-wrapper button.cancel');
-const body = document.querySelector('main');
+const bluredArea = document.querySelector('main');
 
 const popUpModalActivator = () => {
     modal.classList.add('active');
-    body.classList.add('blured');
+    bluredArea.classList.add('blured');
 }
 
 cancelButton.addEventListener('click', () => modal.classList.remove('active'));
