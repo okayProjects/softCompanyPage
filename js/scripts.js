@@ -211,5 +211,9 @@ const popUpModalActivator = () => {
     bluredArea.classList.add('blured');
 }
 
-cancelButton.addEventListener('click', () => modal.classList.remove('active'));
+cancelButton.addEventListener('click', () => {
+    modal.classList.remove('active');
+    bluredArea.classList.remove('blured');
+});
+
 buttons.forEach(button => button.addEventListener('click', popUpModalActivator));
